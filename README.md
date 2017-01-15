@@ -3,7 +3,8 @@
 
 # Python drivers for Raspberry Pi and SwitchDoc Labs Grove Rotary Dial and Button - Available on store.switchdoc.com
 
-January 2017: First Release
+January 14,2017: First Release
+
 
 Raspberry Pi Pure Python Driver for the SwitchDoc Labs Grove Rotary Dial and Button
 

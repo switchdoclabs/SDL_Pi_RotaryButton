@@ -32,6 +32,8 @@ class SDL_Pi_RotaryButton:
 		self._rotaryButtonPush = False
 		# button sensor setup
 		GPIO.setup(SDL_Pi_RotaryButton_RotaryButtonClick, GPIO.IN )
+
+		self._done = False	
 	
 		# encoder setup
 	
