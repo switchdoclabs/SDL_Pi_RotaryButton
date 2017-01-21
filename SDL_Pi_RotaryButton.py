@@ -30,6 +30,7 @@ class SDL_Pi_RotaryButton:
 
 		GPIO.setmode(GPIO.BCM)
 		self._rotaryButtonPush = False
+		self._rotaryButtonPushCount = 0
 		# button sensor setup
 		GPIO.setup(SDL_Pi_RotaryButton_RotaryButtonClick, GPIO.IN )
 
@@ -141,10 +142,15 @@ class SDL_Pi_RotaryButton:
 	# handle the button click event
 	def rotaryButtonClickEventHandler (self,pin):
     		self._rotaryButtonPush = True
+		self._rotaryButtonPushCount = self._rotaryButtonPushCount + 1
 	
 	def hasButtonBeenPushed(self):
 		return self._rotaryButtonPush
 
 	def clearButtonBeenPushed(self):
 		self._rotaryButtonPush = False
+		self._rotaryButtonPushCount = 0
+
+	def buttonPushesSinceLastClear(self):
+		return self._rotaryButtonPushCount
 
