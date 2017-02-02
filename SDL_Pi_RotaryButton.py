@@ -94,6 +94,7 @@ class SDL_Pi_RotaryButton:
             	self._LockRotary.acquire()               # get lock for rotary switch
             	NewCounter = self._Rotary_Counter         # get counter value
             	self._Rotary_Counter = 0                  # RESET IT TO 0
+        	self._done = False
             	self._LockRotary.release()               # and release lock
 
 		# start the worker thread to read
